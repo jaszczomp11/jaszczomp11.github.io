@@ -96,24 +96,26 @@
         
             <h2>Hejnał Mariacki rozbrzmiewa z północnej wieży Kościoła Mariackiego co godzinę.</h2>
             <p>Za każdym razem melodia charakterystycznie urywa się co ma symbolizować zabitego w 1241 roku trębacza, który został ugodzony w gardło tatarską strzałą podczas trąbienia na alarm. Historia ta została wymyślona w latach 20 XX wieku.</p>
-       
-        
+           
             <p> Rynek jest głównym punktem centralnym Starego Miasta i największym średniowiecznym rynkiem Europy (200 m na 200 m). Jego najbardziej charakterystyczną cechą jest XV-wieczna wieża ratuszowa, na którą można wejść.</p>
      
 
        
             <h2>Kraków ma 780 tysięcy mieszkańców. W ostatnich stu latach liczba ludności miasta wzrosła o 420%.</h2>
             <p>Najbardziej zaludnioną dzielnicą jest Prądnik Biały, mieszka tam ponad 72 tysiące osób. Najmniej zaludnione są Łagiewniki i Borek Fałęcki - 16 tysięcy mieszkańców.</p>
+         <button class="back-btn" onclick="backToNav()">Wróć</button>
         <section/>
 
         <section id="legendy">
             <h2>Legenda o zaczarowanych gołębiach</h2>
             <p>Gdy na książęcym tronie zasiadł w XIII wieku Henryk IV Probus, zapragnął zjednoczyć pod swoim władaniem wszystkie polskie ziemie i koronować się na króla. Nie miał jednak pieniędzy, więc udał się po pomoc do czarownicy. Ta przemieniła jego rycerzy w gołębie. Ptaki obsiadły kościół Mariacki i zaczęły wydziobywać z jego murów drobne kamyki, które spadając na ziemię, zamieniały się w złote monety! Uradowany i wzbogacony książę wyprawił się do Rzymu po poparcie papieża w zdobyciu korony. Po drodze jednak ucztował, bawił się i stracił pieniądze, nigdy nie docierając do Rzymu. Nie wrócił już także do Krakowa, a jego wierna drużyna wciąż na niego czeka, zaklęta pod postacią krakowskich gołębi...</p>
+             <button class="back-btn" onclick="backToNav()">Wróć</button>
         <section/>
 
         <section id="informacje">
             <h2>Kościół Mariacki w Krakowie</h2>
             <p>Bazylika Mariacka to kościół, który każdy turysta w Krakowie powinien zobaczyć, nawet jeżeli nie fascynuje się obiektami sakralnymi. Niezwykłe sklepienie, robiący wrażenie ołtarz oraz zabytkowe dzieła sztuki, witraże i charakterystyczny punkt – hejnał grany z wieży o równej godzinie. </p>
+             <button class="back-btn" onclick="backToNav()">Wróć</button>
         <section/>
  
         <section id="tradycje">
@@ -124,6 +126,7 @@
      
             <h2>W ŚWIECIE WĘDLIN</h2>
             <p>Równie charakterystyczne dla Krakowa są tradycje masarskie. Ich pierwszorzędnym, rozpoznawalnym poza granicami Polski symbolem stała się krakowska sucha – grubo rozdrobniona, wędzona, pieczona, a następnie suszona przez 14 dni kiełbasa, której marka ukształtowała się w okresie międzywojennym. Wpisana na krajową listę produktów tradycyjnych wędlina tak jak chleb prądnicki wyróżnia się dużą trwałością.</p>
+             <button class="back-btn" onclick="backToNav()">Wróć</button>
         <section/>
 
        
@@ -132,7 +135,23 @@
     <footer>
         <p>&copy; 2025 Zwyczaje Krakowa. Wszelkie prawa zastrzeżone.</p>
     </footer>
+            
+ <script>
+    function showContent(contentId) {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById('wstep').style.display = 'none'; // Ukrywa wstęp
+      const selectedSection = document.getElementById(contentId);
+      selectedSection.classList.add('active');
+    }
 
+    function backToNav() {
+      const sections = document.querySelectorAll('section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById('wstep').style.display = 'block'; // Pokazuje wstęp z powrotem
+    }
+  </script>
+            
 </body>
 </html>
 
